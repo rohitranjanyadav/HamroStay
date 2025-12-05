@@ -1,0 +1,32 @@
+# Node modules (backend + frontend)
+backend/node_modules/
+frontend/node_modules/
+
+# Environment files
+backend/.env
+frontend/.env
+
+# Build files
+backend/dist/
+frontend/dist/
+frontend/build/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Cache
+backend/.cache/
+frontend/.cache/
+
+# Uploads (if backend stores dynamic files)
+backend/uploads/
