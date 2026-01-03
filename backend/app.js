@@ -69,34 +69,9 @@ app.use((req, res, next) => {
   next();
 });
 
-// app.get("/demouser", async (req, res) => {
-//   let fakeUser = new User({
-//     email: "fake@gmail.com",
-//     username: "rohit",
-//   });
-
-//   let registeredUser = await User.register(fakeUser, "helloworld");
-//   res.send(registeredUser);
-// });
-
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
-
-// app.get('/testListing',async(req,res)=>{
-//   let sampleListing = new Listing({
-//     title:"The Villa",
-//     description:"Beside nature",
-//     price:1000,
-//     location:"Beach",
-//     country:"Nepal"
-//   })
-
-//   await sampleListing.save()
-
-//   console.log("Sample was saved")
-//   res.send("Successful testing")
-// })
 
 app.use((req, res, next) => {
   next(new ExpressError(404, "Page Not Found!"));
